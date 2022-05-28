@@ -97,24 +97,7 @@ class Line_Follower():
                 
             cv2.drawContours(cropped_image1, c, -1, (0,255,0), 1)
             
-            self.pub.publish(d)
-            cv2.imshow("Mask",cropped_image3)
-            cv2.imshow("Frame",cropped_image1)
-            cv2.imshow("Frame1",frame)
-
-            #cv2.imshow("Gray",cropped_image2)   
-            
-
-        
-            if cv2.waitKey(10) & 0xff == ord('q'):
-                break
-        cap.release()
-
-        cv2.destroyAllWindows()
 
 
 
-if __name__=='__main__':
-    a=Line_Follower()
-    a.img_detection()
     
